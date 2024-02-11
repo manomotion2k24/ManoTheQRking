@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
     <title>3D Model View</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
 </head>
