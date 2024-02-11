@@ -6,20 +6,6 @@ Deschide link-ul in Safari daca ai Iphone
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Model View</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
-        }
-        model-viewer {
-            width: 60%; /* Ajustează acest procentaj în funcție de dimensiunea dorită */
-            height: 80%; /* Ajustează acest procentaj în funcție de dimensiunea dorită */
-        }
-    </style>
 </head>
 <body>
 
