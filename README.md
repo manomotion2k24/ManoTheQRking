@@ -2,8 +2,8 @@ Deschide link-ul in Safari daca ai Iphone
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-4">
-    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <title>3D Model View</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
 </head>
