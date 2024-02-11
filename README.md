@@ -8,9 +8,9 @@
 <body>
 
 <!-- Aici adăugăm un paragraf cu un ID pentru a putea fi ascuns sau afișat de script -->
-<p id="iosMessage" style="display: none;">Deschide în Safari dacă ești pe Apple</p>
+<p id="iosMessage" style="display: none;">Deschide în Safari pentru a vedea modelul in spațiul tău</p>
 
-<p><a href="https://vimeo.com/user74836700">Înapoi la pagina produsului</a></p>
+<p><a href="https://www.instagram.com/manomanoliu/">Înapoi la pagina produsului</a></p>
 
 <model-viewer src="Avatar1.glb" ios-src="Avatar1.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="A 3D model of an avatar"></model-viewer>
 
