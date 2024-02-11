@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+i love you beib :*
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,9 +34,7 @@
 
 <model-viewer src="Avatar1.glb" ios-src="Avatar1.usdz" alt="Un avatar 3D" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>
     <button slot="ar-button" class="ar-button">View in your space</button>
-</model-viewer>
 
-<script>
     // Personalizează comportamentul butonului AR dacă este necesar
 </script>
 
