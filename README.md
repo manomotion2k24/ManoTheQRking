@@ -1,4 +1,4 @@
-i love you beib :*
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,4 +34,3 @@ i love you beib :*
     <model-viewer src="Avatar1.glb" ios-src="Avatar1.usdz" alt="A 3D model of an avatar" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>
 </body>
 </html>
-
