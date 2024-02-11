@@ -1,45 +1,32 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.2">
-    <title>3D Model View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Modele 3D</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+      }
+      model-viewer {
+        width: 90vw; /* Ajustează lățimea după necesități */
+        height: 45vh; /* Ajustează înălțimea după necesități */
+        margin-bottom: 2vh;
+      }
+    </style>
 </head>
 <body>
 
-<!-- Aici adăugăm un paragraf cu un ID pentru a putea fi ascuns sau afișat de script -->
-<p id="iosMessage" style="display: none;">Deschide în Safari pentru a vedea modelul in spațiul tău</p>
+<model-viewer src="Avatar1.glb" ios-src="Avatar1.usdz" ar camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Primul model 3D"></model-viewer>
 
-<p><a href="https://www.instagram.com/manomanoliu/">Înapoi la pagina produsului</a></p>
-
-<model-viewer src="Avatar1.glb" ios-src="Avatar1.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="A 3D model of an avatar"></model-viewer>
-
-<script>
-    // Functie pentru a verifica daca utilizatorul este pe un dispozitiv iOS
-    function checkIfIOS() {
-        var iDevices = [
-            'iPad Simulator',
-            'iPhone Simulator',
-            'iPod Simulator',
-            'iPad',
-            'iPhone',
-            'iPod'
-        ];
-
-        if (!!navigator.platform) {
-            while (iDevices.length) {
-                if (navigator.platform === iDevices.pop()){ return true; }
-            }
-        }
-
-        return false;
-    }
-
-    // Dacă este iOS, afișăm mesajul
-    if(checkIfIOS()) {
-        document.getElementById('iosMessage').style.display = 'block';
-    }
-</script>
+<model-viewer src="Avatar2.glb" ios-src="Avatar2.usdz" ar camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Al doilea model 3D"></model-viewer>
 
 </body>
 </html>
