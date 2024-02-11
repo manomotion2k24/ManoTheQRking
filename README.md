@@ -13,9 +13,7 @@
 
 <p><a href="https://vimeo.com/user74836700">Înapoi la pagina produsului</a></p>
 
-<model-viewer src="Avatar1.glb" ios-src="Avatar1.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="A 3D model of an avatar"></model-viewer>
-
-<model-viewer src="Avatar2.glb" ios-src="Avatar2.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="2" alt="An 3D model of a second avatar"></model-viewer>
+<model-viewer src="Avatar2.glb" ios-src="Avatar2.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="An 3D model of a second avatar"></model-viewer>
 
 <script>
     // Functie pentru a verifica daca utilizatorul este pe un dispozitiv iOS
