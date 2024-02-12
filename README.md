@@ -31,8 +31,8 @@
 </head>
 <body>
 
-<p id="iosMessage">Model 3D</p>
-<p id="androidMessage">Model 3D</p>
+<p id="iosMessage">Model 3D<br>Apasă pe acest buton pentru a vedea ↑ produsul în camera ta</p>
+<p id="androidMessage">Model 3D<br>Apasă pe acest buton pentru a vedea produsul în camera ta ↑</p>
 
 <p><a href="https://vimeo.com/user74836700">Înapoi la pagina produsului</a></p>
 
@@ -46,8 +46,10 @@
         var ua = navigator.userAgent || navigator.vendor || window.opera;
         if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
             document.getElementById('iosMessage').style.display = 'block';
+            document.getElementById('androidMessage').style.display = 'none';
         } else if (/android/i.test(ua)) {
             document.getElementById('androidMessage').style.display = 'block';
+            document.getElementById('iosMessage').style.display = 'none';
         }
     }
     showMessageBasedOnOS();
