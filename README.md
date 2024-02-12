@@ -11,17 +11,17 @@
         }
         #iosMessage, #androidMessage {
             display: none;
-            animation: rotate360 3s linear infinite;
-            transform: rotateX(20deg) rotateY(10deg);
+            animation: rotateX360 3s linear infinite;
+            transform-style: preserve-3d;
             font-weight: bold;
-            text-shadow: 1px 1px 2px #000;
+            text-shadow: 5px 5px 5px #000;
         }
-        @keyframes rotate360 {
+        @keyframes rotateX360 {
             from {
-                transform: rotateX(20deg) rotateY(10deg);
+                transform: rotateX(0deg);
             }
             to {
-                transform: rotateX(360deg) rotateY(360deg);
+                transform: rotateX(360deg);
             }
         }
     </style>
@@ -33,8 +33,8 @@
 
 <p><a href="https://vimeo.com/user74836700">Înapoi la pagina produsului</a></p>
 
-<model-viewer src="Avatar1.glb" ios-src="Avatar1.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="A 3D model of an avatar"></model-viewer>
-<!-- Adaugă aici celelalte <model-viewer> pentru modelele tale 3D -->
+<model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="5" alt="A 3D model of an avatar"></model-viewer>
+<!-- Adaugă aici orice alte <model-viewer> pentru modelele tale 3D suplimentare -->
 
 <script>
     // Functie pentru a verifica daca utilizatorul este pe un dispozitiv iOS sau Android
