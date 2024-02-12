@@ -8,10 +8,10 @@
     <style>
         @keyframes rotate360 {
             from {
-                transform: rotate(0deg);
+                transform: rotateX(0deg);
             }
             to {
-                transform: rotate(360deg);
+                transform: rotateX(360deg);
             }
         }
         #iosMessage {
