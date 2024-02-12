@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.3">
     <title>3D Model View</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+    <style>
+        @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        #iosMessage {
+            display: none; /* Acest stil va fi schimbat în 'block' prin JavaScript pentru dispozitivele iOS */
+            animation: rotate360 30s linear infinite;
+        }
+    </style>
 </head>
 <body>
 
 <!-- Aici adăugăm un paragraf cu un ID pentru a putea fi ascuns sau afișat de script -->
-<p id="iosMessage" style="display: none;">Deschide în Safari dacă ești pe Apple</p>
+<p id="iosMessage">Deschide în Safari dacă ești pe Apple</p>
 
 <p><a href="https://vimeo.com/user74836700">Înapoi la pagina produsului</a></p>
 
@@ -17,9 +31,10 @@
 
 <model-viewer src="Avatar2.glb" ios-src="Avatar2.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="2" alt="An 3D model of a second avatar"></model-viewer>
 
-<model-viewer src="Avatar3.glb" ios-src="Avatar3.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="3" alt="Ann 3D model of a second avatar"></model-viewer>
+<model-viewer src="Avatar3.glb" ios-src="Avatar3.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="3" alt="An 3D model of a third avatar"></model-viewer>
 
-<model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="4" alt="Annn 3D model of a second avatar"></model-viewer>
+<model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="4" alt="An 3D model of a fourth avatar"></model-viewer>
+
 <script>
     // Functie pentru a verifica daca utilizatorul este pe un dispozitiv iOS
     function checkIfIOS() {
@@ -34,7 +49,9 @@
 
         if (!!navigator.platform) {
             while (iDevices.length) {
-                if (navigator.platform === iDevices.pop()){ return true; }
+                if (navigator.platform === iDevices.pop()) { 
+                    return true; 
+                }
             }
         }
 
