@@ -1,3 +1,4 @@
+Nike SPORT roșu
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,7 +40,7 @@
 
 <!-- Textul mutat sub modelul 3D -->
 <p id="arInstructionAndroid" style="display:none;">Apasă pe acest buton pentru a vedea produsul în camera ta ↑</p>
-<p id="arInstructionIOS" style="display:none;">Apasă pe acest buton pentru a vedea ↑ produsul în camera ta</p>
+<p id="arInstructionIOS" style="display:none;">Apasă pe acest buton pentru a vedea produsul în camera ta ↑ </p>
 
 <script>
     // Functie pentru a verifica daca utilizatorul este pe un dispozitiv iOS sau Android și a afișa mesajul corespunzător
