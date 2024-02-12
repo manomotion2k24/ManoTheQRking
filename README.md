@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Nike SPORT roșu
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,13 +10,21 @@
             perspective: 1000px;
         }
         #iosMessage, #androidMessage {
-            /* Asigurăm că aceste elemente sunt inițial ascunse și se vor afișa doar pe platforma corespunzătoare */
             display: none;
             font-weight: bold;
-            text-shadow: 3px 3px 4px red; /* Umbra textului roșu */
+            text-shadow: 3px 3px 4px black; /* Schimbat culoarea umbrei în negru */
+            animation: rotateAndBack 2s ease-in-out forwards; /* Adăugat animația de rotație */
+        }
+        @keyframes rotateAndBack {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(100deg);
+            }
         }
         .bounce {
-            display: inline-block; /* Acest lucru asigură că animația se aplică doar la elementul span, nu la întregul paragraf */
+            display: inline-block;
             animation: bounce 1s infinite;
         }
         @keyframes bounce {
@@ -38,7 +46,6 @@
 
 <model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="4" alt="A 3D model of an avatar"></model-viewer>
 
-<!-- Asigurați-vă că textul este vizibil înainte de a adăuga animația -->
 <p id="arInstructionAndroid" style="display:none;">Apasă pe acest buton pentru a vedea <span class="bounce">↑</span> produsul în camera ta.</p>
 <p id="arInstructionIOS" style="display:none;">Apasă pe acest buton pentru a vedea <span class="bounce">↑</span> produsul în camera ta.</p>
 
