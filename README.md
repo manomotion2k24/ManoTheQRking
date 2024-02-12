@@ -13,14 +13,14 @@ Nike SPORT roșu
             display: none;
             font-weight: bold;
             text-shadow: 3px 3px 4px black; /* Schimbat culoarea umbrei în negru */
-            animation: rotateAndBack 2s ease-in-out forwards; /* Adăugat animația de rotație */
+            animation: rotateYInfinite 2s linear infinite; /* Modificat pentru rotație pe verticală și repetiție la infinit */
         }
-        @keyframes rotateAndBack {
+        @keyframes rotateYInfinite {
             0%, 100% {
-                transform: rotate(0deg);
+                transform: rotateY(0deg);
             }
             50% {
-                transform: rotate(100deg);
+                transform: rotateY(100deg);
             }
         }
         .bounce {
