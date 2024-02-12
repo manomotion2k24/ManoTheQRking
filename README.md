@@ -1,4 +1,4 @@
-Nike SPORT roșu
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,34 +7,42 @@ Nike SPORT roșu
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
     <style>
         body {
-            perspective: 800px;
+            perspective: 1000px;
         }
         #iosMessage, #androidMessage {
             display: none;
-            animation: rotateX180 3s linear infinite;
+            animation: rotateX360 30s linear infinite;
             transform-style: preserve-3d;
             font-weight: bold;
-            text-shadow: 5px 5px 5px #000;
+            text-shadow: 1px 1px 2px #000;
         }
         @keyframes rotateX360 {
             from {
                 transform: rotateX(0deg);
             }
             to {
-                transform: rotateX(180deg);
+                transform: rotateX(360deg);
             }
+        }
+        .ar-instruction {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
+<p id="iosMessage">Model 3D</p>
 <p id="iosMessage">Deschide în Safari dacă ești pe Apple</p>
-<p id="androidMessage">Apasati pe butonul din coltul drept al imaginii pentru a vedea in spatiul dumneavoastra</p>
+<p id="androidMessage">Model 3D</p>
 
 <p><a href="https://vimeo.com/user74836700">Înapoi la pagina produsului</a></p>
 
-<model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="5" alt="A 3D model of an avatar"></model-viewer>
-<!-- Adaugă aici orice alte <model-viewer> pentru modelele tale 3D suplimentare -->
+<model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="4" alt="A 3D model of an avatar"></model-viewer>
+<p class="ar-instruction">Apasă pe acest buton pentru a vedea produsul în camera ta ↑</p>
+
+<!-- Adaugă aici orice alte <model-viewer> și <p class="ar-instruction"> pentru modelele tale 3D suplimentare -->
 
 <script>
     // Functie pentru a verifica daca utilizatorul este pe un dispozitiv iOS sau Android
