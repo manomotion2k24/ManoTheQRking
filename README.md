@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Nike SPORT roșu
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,11 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
     <style>
         body {
-            perspective: 1000px;
+            perspective: 800px;
         }
         #iosMessage, #androidMessage {
             display: none;
-            animation: rotateX360 3s linear infinite;
+            animation: rotateX180 3s linear infinite;
             transform-style: preserve-3d;
             font-weight: bold;
             text-shadow: 5px 5px 5px #000;
@@ -21,7 +21,7 @@
                 transform: rotateX(0deg);
             }
             to {
-                transform: rotateX(360deg);
+                transform: rotateX(180deg);
             }
         }
     </style>
