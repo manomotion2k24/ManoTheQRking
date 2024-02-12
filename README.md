@@ -17,7 +17,7 @@
 
 <model-viewer src="Avatar2.glb" ios-src="Avatar2.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="2" alt="An 3D model of a second avatar"></model-viewer>
 
-
+<model-viewer src="Avatar3.glb" ios-src="Avatar3.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="3" alt="Ann 3D model of a second avatar"></model-viewer>
 <script>
     // Functie pentru a verifica daca utilizatorul este pe un dispozitiv iOS
     function checkIfIOS() {
