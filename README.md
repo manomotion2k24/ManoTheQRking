@@ -1,4 +1,4 @@
-Nike SPORT roșu
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,15 +12,15 @@ Nike SPORT roșu
         #iosMessage, #androidMessage {
             display: none;
             font-weight: bold;
-            text-shadow: 3px 3px 4px black; /* Schimbat culoarea umbrei în negru */
-            animation: rotateYInfinite 2s linear infinite; /* Modificat pentru rotație pe verticală și repetiție la infinit */
+            text-shadow: 3px 3px 4px black; /* Culoarea umbrei este negru */
+            animation: rotateYInfinitely 2s linear infinite; /* Animație modificată pentru rotație pe axa Y la infinit */
         }
-        @keyframes rotateYInfinite {
-            0%, 100% {
-                transform: rotateY(0deg);
+        @keyframes rotateYInfinitely {
+            from {
+                transform: rotateY(0);
             }
-            50% {
-                transform: rotateY(100deg);
+            to {
+                transform: rotateY(360deg);
             }
         }
         .bounce {
