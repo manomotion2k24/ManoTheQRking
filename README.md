@@ -39,8 +39,8 @@ Nike SPORT roșu
 <model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="4" alt="A 3D model of an avatar"></model-viewer>
 
 <!-- Textul mutat sub modelul 3D -->
-<p id="arInstructionAndroid" style="display:none;">Apasă pe acest buton pentru a vedea produsul în camera ta ↑</p>
-<p id="arInstructionIOS" style="display:none;">Apasă pe acest buton pentru a vedea produsul în camera ta ↑ </p>
+<p id="arInstructionAndroid" style="display:none;">Apasă pe acest buton pentru a vedea ↑ produsul în camera ta </p>
+<p id="arInstructionIOS" style="display:none;">Apasă pe acest buton pentru a vedea ↑ produsul în camera ta </p>
 
 <script>
     // Functie pentru a verifica daca utilizatorul este pe un dispozitiv iOS sau Android și a afișa mesajul corespunzător
