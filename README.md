@@ -10,10 +10,11 @@
             perspective: 1000px;
         }
         #iosMessage, #androidMessage {
-            display: none;
+             display: none;
+            animation: rotateAnimation 6s linear infinite; /* Durata totală ajustată pentru a permite întoarcerea la 0 grade */
+            transform-style: preserve-3d;
             font-weight: bold;
-            text-shadow: 3px 3px 4px black; /* Culoarea umbrei este negru */
-            animation: rotateYInfinitely 2s linear infinite; /* Animație modificată pentru rotație pe axa Y la infinit */
+            text-shadow: 3px 3px 4px #000;
         }
         @keyframes rotateYInfinitely {
             from {
