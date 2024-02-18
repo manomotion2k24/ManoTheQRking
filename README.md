@@ -13,13 +13,20 @@
         width: 100%;
         height: 500px; /* Ajustat pentru a îmbunătăți vizualizarea */
       }
-      @keyframes levitate {
-        0%, 100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .nav-button {
+        cursor: pointer;
+        background-color: #ddd;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      .nav-button:hover {
+        background-color: #ccc;
       }
       .levitate {
         display: inline-block;
@@ -33,16 +40,9 @@
         top: 8px;
         right: 8px;
       }
-      h2 {
-        font-size: 20px; /* Ajustat pentru a fi mai lizibil */
-        margin: 10px 0; /* Spațiere ajustată */
-      }
-      h3 {
-        font-size: 18px; /* Ajustat pentru a fi mai lizibil */
-        margin: 20px 0 Participant 0;
-      }
-      p {
-        font-size: 16px; /* Ajustat pentru a fi mai lizibil */
+      h2, h3, p {
+        margin-left: 15px;
+        margin-right: 15px;
       }
       .bold-link {
         font-weight: bold;
@@ -51,7 +51,7 @@
 </head>
 <body>
 
-<div style="text-align: left; padding: 15px;">
+<div style="text-align: left;">
     <h2><a href="https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts" target="_blank">Comanda Acum: Nike Free Matcon, rosu</a></h2>
     <h3>Workout Shoes</h3>
     <model-viewer id="modelViewer" src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
@@ -59,6 +59,10 @@
           <span class="levitate">👋</span> Activează modul AR
       </button>
     </model-viewer>
+    <div class="navigation">
+        <button class="nav-button" onclick="changeModel(-1)">⇦ prev</button>
+        <button class="nav-button" onclick="changeModel(1)">next ⇨</button>
+    </div>
     <p>
         ✔️Blast From the Past<br>
         ✔️Flexibility for Speed<br>
@@ -71,8 +75,8 @@
 </div>
 
 <script>
-  const models = ["Avatar1.glb", "Avatar2.glb", "Avatar4.glb"]; // Adaugă calea pentru fiecare model
-  let currentIndex = 2; // Începe cu Avatar4.glb care este indexul 2 în array-ul nostru
+  const models = ["Avatar1.glb", "Avatar2.glb", "Avatar4.glb"];
+  let currentIndex = 2;
 
   const viewer = document.getElementById('modelViewer');
 
@@ -87,22 +91,6 @@
 
     viewer.src = models[currentIndex];
   }
-
-  let startX;
-
-  viewer.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].pageX;
-  });
-
-  viewer.addEventListener('touchend', (e) => {
-    const endX = e.changedTouches[0].pageX;
-
-    if (startX - endX > 50) {
-      changeModel(1); // Swipe left
-    } else if (startX - endX < -50) {
-      changeModel(-1); // Swipe right
-    }
-  });
 </script>
 
 </body>
