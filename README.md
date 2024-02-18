@@ -45,7 +45,7 @@ Nike SPORT roșu
 
 <p><a href="https://vimeo.com/user74836700">Înapoi la pagina produsului</a></p>
 
-<model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="4" alt="A 3D model of an avatar"></model-viewer>
+<model-viewer src="guler2.glb" ios-src="guler2.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="4" alt="A 3D model of an avatar"></model-viewer>
 
 <p id="arInstructionAndroid" style="display:none;">Apasă pe acest buton pentru a vedea <span class="bounce">↑</span> produsul în camera ta.</p>
 <p id="arInstructionIOS" style="display:none;">Apasă pe acest buton pentru a vedea <span class="bounce">↑</span> produsul în camera ta.</p>
