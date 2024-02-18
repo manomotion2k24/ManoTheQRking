@@ -12,13 +12,12 @@
       }
       model-viewer {
         width: 100%;
-        height: 300px; /* Actualizat la 200px */
+        height: 300px; /* Dimensiunea modelului ajustată la 200px */
       }
       .navigation {
         display: flex;
-        justify-content: space-between; /* Actualizat pentru a departa butoanele */
-        margin-top: 10px;
-        padding: 0 20px; /* Adăugat padding pentru a alinia butoanele cu marginile modelului */
+        justify-content: space-between; /* Butoanele de navigație sunt departate */
+        margin: 10px 20px; /* Spațiu adăugat pentru aliniere */
       }
       .nav-button {
         cursor: pointer;
@@ -40,6 +39,9 @@
         margin: auto;
         padding: 20px;
       }
+      .links {
+        margin-top: 20px; /* Spațiu adăugat între butoane și hyperlinkuri */
+      }
     </style>
 </head>
 <body>
@@ -56,19 +58,15 @@
         <button class="nav-button" onclick="changeModel(-1)">⇦ prev</button>
         <button class="nav-button" onclick="changeModel(1)">next ⇨</button>
     </div>
-    <p>
-        ✔️Blast From the Past<br>
-        ✔️Flexibility for Speed<br>
-        ✔️Stability for Strength<br>
-        ✔️Colour Shown: Team Red/Cave Purple/Bright Crimson
-    </p>
-    <p><a href="https://manomotion2k24.github.io/Pizza/" class="bold-link" target="_blank">Pizza Quattro Formaggie</a></p>
-    <p><a href="https://manomotion2k24.github.io/My-Beloved-Girl/" class="bold-link" target="_blank">Rama Foto Familie</a></p>
-    <p><a href="https://manomotion2k24.github.io/cactus/" class="bold-link" target="_blank">Cactus Opuntia Albispina</a></p>
+    <div class="links">
+        <p><a href="https://manomotion2k24.github.io/Pizza/" class="bold-link" target="_blank">Pizza Quattro Formaggie</a></p>
+        <p><a href="https://manomotion2k24.github.io/My-Beloved-Girl/" class="bold-link" target="_blank">Rama Foto Familie</a></p>
+        <p><a href="https://manomotion2k24.github.io/cactus/" class="bold-link" target="_blank">Cactus Opuntia Albispina</a></p>
+    </div>
 </div>
 
 <script>
-  const models = ["Avatar1.glb", "Avatar2.glb", "Avatar4.glb"];
+  const models = ["guler2.glb", "Avatar2.glb", "Avatar4.glb"];
   let currentIndex = 2;
 
   const viewer = document.getElementById('modelViewer');
