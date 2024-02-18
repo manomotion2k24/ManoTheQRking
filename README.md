@@ -1,70 +1,74 @@
-Nike SPORT roșu
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.3">
-    <title>3D Model View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comanda Acum: Nike Free Matcon, rosu</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
     <style>
-        body {
-            perspective: 1000px;
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      model-viewer {
+        width: 100%;
+        height: 400px; /* Mărit pentru o vizualizare mai bună */
+      }
+      @keyframes levitate {
+        0%, 100% {
+          transform: translateY(0);
         }
-        #iosMessage, #androidMessage {
-             display: none;
-            animation: rotateAnimation 6s linear infinite; /* Durata totală ajustată pentru a permite întoarcerea la 0 grade */
-            transform-style: preserve-3d;
-            font-weight: bold;
-            text-shadow: 3px 3px 4px #000;
+        50% {
+          transform: translateY(-10px);
         }
-        @keyframes rotateYInfinitely {
-            from {
-                transform: rotateY(0);
-            }
-            to {
-                transform: rotateY(360deg);
-            }
-        }
-        .bounce {
-            display: inline-block;
-            animation: bounce 1s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-5px);
-            }
-        }
+      }
+      .levitate {
+        display: inline-block;
+        animation: levitate 1s ease-in-out infinite;
+      }
+      .ar-button {
+        background-color: white;
+        border-radius: 4px;
+        border: none;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+      }
+
+      h2 {
+        font-size: 100%;
+        margin: 20px 0; /* Ajustat pentru aliniere și spațiere */
+      }
+      h3 {
+        font-size: 150%;
+        font-weight: bold;
+        margin: 20px 0 10px 0;
+      }
+      p {
+        font-size: 100%;
+      }
+      .bold-link {
+        font-weight: bold;
+      }
     </style>
 </head>
 <body>
 
-<p id="iosMessage">Model 3D</p>
-<p id="androidMessage">Model 3D</p>
-
-<p><a href="https://vimeo.com/user74836700">Înapoi la pagina produsului</a></p>
-
-<model-viewer src="guler2.glb" ios-src="guler2.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="4" alt="A 3D model of an avatar"></model-viewer>
-
-<p id="arInstructionAndroid" style="display:none;">Apasă pe acest buton pentru a vedea <span class="bounce">↑</span> produsul în camera ta.</p>
-<p id="arInstructionIOS" style="display:none;">Apasă pe acest buton pentru a vedea <span class="bounce">↑</span> produsul în camera ta.</p>
-
-<script>
-    function showMessageBasedOnOS() {
-        var ua = navigator.userAgent || navigator.vendor || window.opera;
-        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
-            document.getElementById('iosMessage').style.display = 'block';
-            document.getElementById('arInstructionIOS').style.display = 'block';
-            document.getElementById('androidMessage').style.display = 'none';
-        } else if (/android/i.test(ua)) {
-            document.getElementById('androidMessage').style.display = 'block';
-            document.getElementById('arInstructionAndroid').style.display = 'block';
-            document.getElementById('iosMessage').style.display = 'none';
-        }
-    }
-    showMessageBasedOnOS();
-</script>
+<div style="text-align: left; padding: 15px;">
+    <h2><a href="https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts" target="_blank">Comanda Acum: Nike Free Matcon, rosu</a></h2>
+    <h3>Workout Shoes</h3>
+    <model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="5" alt="Nike Free Matcon 4" min-camera-orbit="auto 45deg auto" max-camera-orbit="auto 90deg auto">
+      <button slot="ar-button" class="ar-button">
+          <span class="levitate">👋</span> Activează modul AR
+      </button>
+    </model-viewer>
+    <p>✔️Blast From the Past<br>
+    ✔️Flexibility for Speed<br>
+    ✔️Stability for Strength<br>
+    ✔️Colour Shown: Team Red/Cave Purple/Bright Crimson</p>
+    <!-- Hyperlink-uri adăugate sub lista de "ingrediente" -->
+    <p><a href="https://manomotion2k24.github.io/Pizza/" class="bold-link" target="_blank">Pizza Quattro Formaggie</a></p>
+    <p><a href="https://manomotion2k24.github.io/My-Beloved-Girl/" class="bold-link" target="_blank">Rama Foto Familie</a></p>
+</div>
 
 </body>
 </html>
