@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comanda Acum: Nike Free Matcon, rosu</title>
+    <title>Descoperă Produsele Noastre</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
     <style>
       body {
@@ -12,13 +12,13 @@
       }
       model-viewer {
         width: 100%;
-        height: 200px; /* Actualizat la 200px */
+        height: 400px; /* Ajustat la 400px pentru o vizualizare mai bună */
       }
       .navigation {
         display: flex;
-        justify-content: space-between; /* Actualizat pentru a departa butoanele */
-        margin-top: 40px; /* Actualizat margin-top pentru a crea spațiu */
-        padding: 0 20px; /* Adăugat padding pentru a alinia butoanele cu marginile modelului */
+        justify-content: space-between;
+        margin-top: 20px;
+        padding: 0 20px;
       }
       .nav-button {
         cursor: pointer;
@@ -41,33 +41,29 @@
         padding: 20px;
       }
       .features {
-        margin-top: 40px; /* Distanță adăugată între butoane și caracteristici */
+        margin-top: 20px;
       }
     </style>
 </head>
 <body>
 
 <div class="content">
-    <!-- Mutat în afara div-ului .content pentru a ridica titlul -->
-    <h2 style="text-align: center;"><a href="https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts" target="_blank">Comanda Acum: Nike Free Matcon, rosu</a></h2>
+    <h2 style="text-align: center;"><a href="#" target="_blank">Descoperă Produsele Noastre</a></h2>
     <div class="model-and-navigation">
-      <h3>Workout Shoes</h3>
-      <model-viewer id="modelViewer" src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
-        <button slot="ar-button" class="ar-button">
-            <span class="levitate">👋</span> Activează modul AR
-        </button>
+      <h3 id="productTitle">Scaun tapițat</h3>
+      <model-viewer id="modelViewer" src="scaun.glb" ios-src="scaun.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Produsul nostru">
+        <button slot="ar-button" class="ar-button">👋 Activează modul AR</button>
       </model-viewer>
       <div class="navigation">
           <button class="nav-button" onclick="changeModel(-1)">⇦ prev</button>
           <button class="nav-button" onclick="changeModel(1)">next ⇨</button>
       </div>
     </div>
-    <div class="features">
+    <div class="features" id="productFeatures">
       <p>
-          ✔️Blast From the Past<br>
-          ✔️Flexibility for Speed<br>
-          ✔️Stability for Strength<br>
-          ✔️Colour Shown: Team Red/Cave Purple/Bright Crimson
+          ✔️Produsul nu este montat<br>
+          ✔️Asamblarea este rapida si usoara<br>
+          ✔️otel acoperit cu pulbere
       </p>
     </div>
     <p><a href="https://manomotion2k24.github.io/Pizza/" class="bold-link" target="_blank">Pizza Quattro Formaggie</a></p>
@@ -76,10 +72,16 @@
 </div>
 
 <script>
-  const models = ["guler2.glb", "scaun.glb", "Avatar4.glb"];
-  let currentIndex = 2;
+  const models = [
+    {file: "guler2.glb", title: "Cumpara acum Guler masaj", link: "https://unizdrav.ro/produse/4021/guler-de-masaj-pentru-gat-si-umeri-unizdrav", subtitle: "Guler de masaj pentru gât și umeri", features: "✔️Pornirea și oprirea căldurii, ✔️Schimbarea rotației capetelor de masaj, ✔️3 niveluri de intensitate, ✔️Oprire automată"},
+    {file: "scaun.glb", title: "Cumpara acum Scaun sufragerie stofă", link: "https://acaju.ro/products/scaun-tapitat-k365-rosu-52x57x90-cm?gad_source=1", subtitle: "Scaun tapițat", features: "✔️Produsul nu este montat, ✔️Asamblarea este rapida si usoara, ✔️otel acoperit cu pulbere"},
+    {file: "Avatar4.glb", title: "", link: "", subtitle: "", features: ""}
+  ];
+  let currentIndex = 1;
 
   const viewer = document.getElementById('modelViewer');
+  const productTitle = document.getElementById('productTitle');
+  const productFeatures = document.getElementById('productFeatures');
 
   function changeModel(step) {
     currentIndex += step;
@@ -90,8 +92,15 @@
       currentIndex = models.length - 1;
     }
 
-    viewer.src = models[currentIndex];
+    const model = models[currentIndex];
+    viewer.src = model.file;
+    viewer.alt = model.subtitle;
+    productTitle.innerHTML = `<a href="${model.link}" target="_blank">${model.title}</a>`;
+    productFeatures.innerHTML = `<p>${model.features.replace(/, /g, "<br>")}</p>`;
   }
+
+  // Inițializare la încărcare
+  window.onload = () => changeModel(0);
 </script>
 
 </body>
