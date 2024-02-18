@@ -12,15 +12,15 @@
       }
       model-viewer {
         width: 100%;
-        height: 300px; /* Actualizat la 200px */
+        height: 300px;
       }
       .navigation {
         display: flex;
-        justify-content: space-between; /* Actualizat pentru a departa butoanele */
-        margin-top: 40px; /* Actualizat margin-top pentru a crea spațiu */
-        padding: 0 20px; /* Adăugat padding pentru a alinia butoanele cu marginile modelului */
+        justify-content: space-between;
+        margin-top: 40px;
+        padding: 0 20px;
       }
-      .nav-button {
+      .nav-button, .ar-button {
         cursor: pointer;
         background-color: #007BFF;
         border: none;
@@ -30,8 +30,11 @@
         color: white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         transition: background-color 0.3s, box-shadow 0.3s;
+        display: block; /* Asigură că butonul este bloc pentru a respecta margin-top */
+        width: fit-content;
+        margin: 20px auto; /* Centrează butonul și adaugă spațiu deasupra și dedesubt */
       }
-      .nav-button:hover {
+      .nav-button:hover, .ar-button:hover {
         background-color: #0056b3;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       }
@@ -41,22 +44,22 @@
         padding: 20px;
       }
       .features {
-        margin-top: 40px; /* Distanță adăugată între butoane și caracteristici */
+        margin-top: 40px;
       }
     </style>
 </head>
 <body>
 
 <div class="content">
-    <!-- Mutat în afara div-ului .content pentru a ridica titlul -->
     <h2 style="text-align: center;"><a href="https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts" target="_blank">Comanda Acum: Nike Free Matcon, rosu</a></h2>
     <div class="model-and-navigation">
       <h3>Workout Shoes</h3>
       <model-viewer id="modelViewer" src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
-        <button slot="ar-button" class="ar-button">
-            <span class="levitate">👋</span> Activează modul AR
-        </button>
       </model-viewer>
+      <!-- Container nou pentru butonul AR -->
+      <button class="ar-button" onclick="activateAR()">
+          <span class="levitate">👋</span> Activează modul AR
+      </button>
       <div class="navigation">
           <button class="nav-button" onclick="changeModel(-1)">⇦ prev</button>
           <button class="nav-button" onclick="changeModel(1)">next ⇨</button>
@@ -91,6 +94,11 @@
     }
 
     viewer.src = models[currentIndex];
+  }
+
+  // Funcția pentru activarea modului AR trebuie definită
+  function activateAR() {
+    // Cod pentru activarea modului AR aici
   }
 </script>
 
