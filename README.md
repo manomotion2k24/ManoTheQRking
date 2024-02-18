@@ -8,50 +8,42 @@
       body {
         margin: 0;
         padding: 0;
+        font-family: Arial, sans-serif; /* Schimbă fontul pentru un aspect mai modern */
       }
       model-viewer {
         width: 100%;
-        height: 500px; /* Ajustat pentru a îmbunătăți vizualizarea */
+        height: 400px; /* Reducem înălțimea pentru a nu părea prea zoom-uit */
       }
       .navigation {
         display: flex;
-        justify-content: space-between;
+        justify-content: center; /* Centrăm butoanele */
         margin-top: 10px;
       }
       .nav-button {
         cursor: pointer;
-        background-color: #ddd;
+        background-color: #007BFF; /* Schimbăm culoarea butoanelor pentru un aspect mai modern */
         border: none;
+        border-radius: 20px; /* Rotunjim marginile */
         padding: 10px 20px;
         font-size: 16px;
+        color: white; /* Textul butoanelor în alb */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adăugăm o umbră pentru un aspect 3D */
+        transition: background-color 0.3s, box-shadow 0.3s; /* Adăugăm tranziții pentru efecte vizuale la hover */
       }
       .nav-button:hover {
-        background-color: #ccc;
+        background-color: #0056b3; /* Închidem culoarea butonului la hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Întărim umbra pentru efect de "lift" */
       }
-      .levitate {
-        display: inline-block;
-        animation: levitate 1s ease-in-out infinite;
-      }
-      .ar-button {
-        background-color: white;
-        border-radius: 4px;
-        border: none;
-        position: absolute;
-        top: 8px;
-        right: 8px;
-      }
-      h2, h3, p {
-        margin-left: 15px;
-        margin-right: 15px;
-      }
-      .bold-link {
-        font-weight: bold;
+      .content {
+        max-width: 800px; /* Limităm lățimea conținutului */
+        margin: auto; /* Centrăm conținutul */
+        padding: 20px;
       }
     </style>
 </head>
 <body>
 
-<div style="text-align: left;">
+<div class="content">
     <h2><a href="https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts" target="_blank">Comanda Acum: Nike Free Matcon, rosu</a></h2>
     <h3>Workout Shoes</h3>
     <model-viewer id="modelViewer" src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
@@ -75,7 +67,7 @@
 </div>
 
 <script>
-  const models = ["Avatar1.glb", "Avatar2.glb", "Avatar4.glb"];
+  const models = ["guler2.glb", "Avatar2.glb", "Avatar4.glb"];
   let currentIndex = 2;
 
   const viewer = document.getElementById('modelViewer');
