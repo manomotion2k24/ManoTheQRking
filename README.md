@@ -54,7 +54,7 @@
 <div style="text-align: left; padding: 15px;">
     <h2><a href="https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts" target="_blank">Comanda Acum: Nike Free Matcon, rosu</a></h2>
     <h3>Workout Shoes</h3>
-    <model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
+    <model-viewer id="modelViewer" src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
       <button slot="ar-button" class="ar-button">
           <span class="levitate">👋</span> Activează modul AR
       </button>
@@ -69,6 +69,41 @@
     <p><a href="https://manomotion2k24.github.io/My-Beloved-Girl/" class="bold-link" target="_blank">Rama Foto Familie</a></p>
     <p><a href="https://manomotion2k24.github.io/cactus/" class="bold-link" target="_blank">Cactus Opuntia Albispina</a></p>
 </div>
+
+<script>
+  const models = ["Avatar1.glb", "Avatar2.glb", "Avatar4.glb"]; // Adaugă calea pentru fiecare model
+  let currentIndex = 0;
+
+  const viewer = document.getElementById('modelViewer');
+
+  function changeModel(step) {
+    currentIndex += step;
+
+    if (currentIndex >= models.length) {
+      currentIndex = 0;
+    } else if (currentIndex < 0) {
+      currentIndex = models.length - 1;
+    }
+
+    viewer.src = models[currentIndex];
+  }
+
+  let startX;
+
+  viewer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX;
+  });
+
+  viewer.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].pageX;
+
+    if (startX - endX > 50) {
+      changeModel(1); // Swipe la stânga
+    } else if (startX - endX < -50) {
+      changeModel(-1); // Swipe la dreapta
+    }
+  });
+</script>
 
 </body>
 </html>
