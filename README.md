@@ -76,7 +76,7 @@
 </div>
 
 <script>
-  const models = ["Avatar1.glb", "Avatar2.glb", "Avatar4.glb"];
+  const models = ["guler2.glb", "Avatar3.glb", "Avatar4.glb"];
   let currentIndex = 2;
 
   const viewer = document.getElementById('modelViewer');
