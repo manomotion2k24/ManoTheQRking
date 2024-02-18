@@ -46,8 +46,9 @@
       .links {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Aliniat la stânga */
-        margin-left: 20px; /* Asigură-te că este aliniat corespunzător în conținut */
+        align-items: flex-start; /* Modificat pentru aliniere la stânga */
+        gap: 0; /* Eliminat spațiul dintre link-uri */
+        margin-left: 20px; /* Adăugat pentru alinierea la stânga în container */
       }
     </style>
 </head>
@@ -78,7 +79,42 @@
 </div>
 
 <script>
-  // Codul JavaScript rămâne neschimbat
+  const models = [
+    { file: "guler2.glb", title: "Cumpara acum Guler masaj", url: "https://unizdrav.ro/produse/4021/guler-de-masaj-pentru-gat-si-umeri-unizdrav", subtitle: "Guler de masaj pentru gât și umeri", features: "✔️Pornirea și oprirea căldurii<br>✔️Schimbarea rotației capetelor de masaj<br>✔️3 niveluri de intensitate<br>✔️Oprire automată" },
+    { file: "scaun.glb", title: "Cumpara acum Scaun sufragerie stofă", url: "https://acaju.ro/products/scaun-tapitat-k365-rosu-52x57x90-cm?gad_source=1", subtitle: "Scaun tapițat", features: "✔️Produsul nu este montat<br>✔️Asamblarea este rapida si usoara<br>✔️otel acoperit cu pulbere" },
+    { file: "Avatar4.glb", title: "Cumpara acum Nike sport shoes", url: "https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts", subtitle: "Nike Free Matcon, rosu", features: "✔️Flexibility for Speed<br>✔️Stability for Strength<br>✔️Blast From the Past" }
+  ];
+  let currentIndex = 2; // Pornim de la modelul Nike sport shoes
+
+  function changeModel(step) {
+    currentIndex += step;
+
+    if (currentIndex >= models.length) {
+      currentIndex = 0;
+    } else if (currentIndex < 0) {
+      currentIndex = models.length - 1;
+    }
+
+    updateModel();
+  }
+
+  function updateModel() {
+    const model = models[currentIndex];
+    const viewer = document.getElementById('modelViewer');
+    const titleElement = document.getElementById('mainTitle');
+    const subtitleElement = document.getElementById('subtitle');
+    const featuresElement = document.getElementById('features');
+
+    viewer.src = model.file;
+    viewer.alt = model.subtitle;
+    titleElement.href = model.url;
+    titleElement.textContent = model.title;
+    subtitleElement.textContent = model.subtitle;
+    featuresElement.innerHTML = model.features;
+  }
+
+  // Inițializăm primul model
+  updateModel();
 </script>
 
 </body>
