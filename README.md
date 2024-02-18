@@ -12,7 +12,7 @@
       }
       model-viewer {
         width: 100%;
-        height: 200px; /* Actualizat la 200px */
+        height: 300px; /* Actualizat la 200px */
       }
       .navigation {
         display: flex;
