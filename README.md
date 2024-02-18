@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,14 +12,13 @@
       }
       model-viewer {
         width: 100%;
-        height: 300px;
-        --poster-color: transparent; /* Asigură că nu există fundal înainte de încărcarea modelului */
+        height: 200px; /* Actualizat la 200px */
       }
       .navigation {
         display: flex;
-        justify-content: space-between;
-        margin-top: 10px; /* Spațiu redus pentru a apropia butoanele de model */
-        padding: 0 20px;
+        justify-content: space-between; /* Actualizat pentru a departa butoanele */
+        margin-top: 40px; /* Actualizat margin-top pentru a crea spațiu */
+        padding: 0 20px; /* Adăugat padding pentru a alinia butoanele cu marginile modelului */
       }
       .nav-button {
         cursor: pointer;
@@ -43,25 +41,21 @@
         padding: 20px;
       }
       .features {
-        margin-top: 20px;
-      }
-      /* Stiluri suplimentare pentru a ajusta poziția butonului AR */
-      model-viewer::part(ar-button) {
-        position: absolute;
-        bottom: -45px; /* Ajustează această valoare în funcție de necesități */
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: 40px; /* Distanță adăugată între butoane și caracteristici */
       }
     </style>
 </head>
 <body>
 
 <div class="content">
+    <!-- Mutat în afara div-ului .content pentru a ridica titlul -->
     <h2 style="text-align: center;"><a href="https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts" target="_blank">Comanda Acum: Nike Free Matcon, rosu</a></h2>
     <div class="model-and-navigation">
       <h3>Workout Shoes</h3>
       <model-viewer id="modelViewer" src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
-        <!-- Butonul AR este deja definit implicit în model-viewer -->
+        <button slot="ar-button" class="ar-button">
+            <span class="levitate">👋</span> Activează modul AR
+        </button>
       </model-viewer>
       <div class="navigation">
           <button class="nav-button" onclick="changeModel(-1)">⇦ prev</button>
@@ -76,22 +70,26 @@
           ✔️Colour Shown: Team Red/Cave Purple/Bright Crimson
       </p>
     </div>
-    <!-- Alte link-uri și conținut -->
+    <p><a href="https://manomotion2k24.github.io/Pizza/" class="bold-link" target="_blank">Pizza Quattro Formaggie</a></p>
+    <p><a href="https://manomotion2k24.github.io/My-Beloved-Girl/" class="bold-link" target="_blank">Rama Foto Familie</a></p>
+    <p><a href="https://manomotion2k24.github.io/cactus/" class="bold-link" target="_blank">Cactus Opuntia Albispina</a></p>
 </div>
 
 <script>
-  const models = ["guler2.glb", "Avatar2.glb", "Avatar4.glb"];
+  const models = ["Avatar1.glb", "Avatar2.glb", "Avatar4.glb"];
   let currentIndex = 2;
 
   const viewer = document.getElementById('modelViewer');
 
   function changeModel(step) {
     currentIndex += step;
+
     if (currentIndex >= models.length) {
       currentIndex = 0;
     } else if (currentIndex < 0) {
       currentIndex = models.length - 1;
     }
+
     viewer.src = models[currentIndex];
   }
 </script>
