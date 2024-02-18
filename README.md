@@ -11,7 +11,7 @@
       }
       model-viewer {
         width: 100%;
-        height: 400px; /* Mărit pentru o vizualizare mai bună */
+        height: 500px; /* Ajustat pentru a îmbunătăți vizualizarea */
       }
       @keyframes levitate {
         0%, 100% {
@@ -33,18 +33,16 @@
         top: 8px;
         right: 8px;
       }
-
       h2 {
-        font-size: 100%;
-        margin: 20px 0; /* Ajustat pentru aliniere și spațiere */
+        font-size: 20px; /* Ajustat pentru a fi mai lizibil */
+        margin: 10px 0; /* Spațiere ajustată */
       }
       h3 {
-        font-size: 150%;
-        font-weight: bold;
+        font-size: 18px; /* Ajustat pentru a fi mai lizibil */
         margin: 20px 0 10px 0;
       }
       p {
-        font-size: 100%;
+        font-size: 16px; /* Ajustat pentru a fi mai lizibil */
       }
       .bold-link {
         font-weight: bold;
@@ -56,16 +54,17 @@
 <div style="text-align: left; padding: 15px;">
     <h2><a href="https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts" target="_blank">Comanda Acum: Nike Free Matcon, rosu</a></h2>
     <h3>Workout Shoes</h3>
-    <model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="5" alt="Nike Free Matcon 4" min-camera-orbit="auto 45deg auto" max-camera-orbit="auto 90deg auto">
+    <model-viewer src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
       <button slot="ar-button" class="ar-button">
           <span class="levitate">👋</span> Activează modul AR
       </button>
     </model-viewer>
-    <p>✔️Blast From the Past<br>
-    ✔️Flexibility for Speed<br>
-    ✔️Stability for Strength<br>
-    ✔️Colour Shown: Team Red/Cave Purple/Bright Crimson</p>
-    <!-- Hyperlink-uri adăugate sub lista de "ingrediente" -->
+    <p>
+        ✔️Blast From the Past<br>
+        ✔️Flexibility for Speed<br>
+        ✔️Stability for Strength<br>
+        ✔️Colour Shown: Team Red/Cave Purple/Bright Crimson
+    </p>
     <p><a href="https://manomotion2k24.github.io/Pizza/" class="bold-link" target="_blank">Pizza Quattro Formaggie</a></p>
     <p><a href="https://manomotion2k24.github.io/My-Beloved-Girl/" class="bold-link" target="_blank">Rama Foto Familie</a></p>
 </div>
