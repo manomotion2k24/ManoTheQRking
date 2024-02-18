@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,14 +14,15 @@
       model-viewer {
         width: 100%;
         height: 300px;
+        --poster-color: transparent; /* Asigură că nu există fundal înainte de încărcarea modelului */
       }
       .navigation {
         display: flex;
         justify-content: space-between;
-        margin-top: 40px;
+        margin-top: 10px; /* Spațiu redus pentru a apropia butoanele de model */
         padding: 0 20px;
       }
-      .nav-button, .ar-button {
+      .nav-button {
         cursor: pointer;
         background-color: #007BFF;
         border: none;
@@ -30,11 +32,8 @@
         color: white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         transition: background-color 0.3s, box-shadow 0.3s;
-        display: block; /* Asigură că butonul este bloc pentru a respecta margin-top */
-        width: fit-content;
-        margin: 20px auto; /* Centrează butonul și adaugă spațiu deasupra și dedesubt */
       }
-      .nav-button:hover, .ar-button:hover {
+      .nav-button:hover {
         background-color: #0056b3;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       }
@@ -44,7 +43,14 @@
         padding: 20px;
       }
       .features {
-        margin-top: 40px;
+        margin-top: 20px;
+      }
+      /* Stiluri suplimentare pentru a ajusta poziția butonului AR */
+      model-viewer::part(ar-button) {
+        position: absolute;
+        bottom: -45px; /* Ajustează această valoare în funcție de necesități */
+        left: 50%;
+        transform: translateX(-50%);
       }
     </style>
 </head>
@@ -55,11 +61,8 @@
     <div class="model-and-navigation">
       <h3>Workout Shoes</h3>
       <model-viewer id="modelViewer" src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
+        <!-- Butonul AR este deja definit implicit în model-viewer -->
       </model-viewer>
-      <!-- Container nou pentru butonul AR -->
-      <button class="ar-button" onclick="activateAR()">
-          <span class="levitate">👋</span> Activează modul AR
-      </button>
       <div class="navigation">
           <button class="nav-button" onclick="changeModel(-1)">⇦ prev</button>
           <button class="nav-button" onclick="changeModel(1)">next ⇨</button>
@@ -73,9 +76,7 @@
           ✔️Colour Shown: Team Red/Cave Purple/Bright Crimson
       </p>
     </div>
-    <p><a href="https://manomotion2k24.github.io/Pizza/" class="bold-link" target="_blank">Pizza Quattro Formaggie</a></p>
-    <p><a href="https://manomotion2k24.github.io/My-Beloved-Girl/" class="bold-link" target="_blank">Rama Foto Familie</a></p>
-    <p><a href="https://manomotion2k24.github.io/cactus/" class="bold-link" target="_blank">Cactus Opuntia Albispina</a></p>
+    <!-- Alte link-uri și conținut -->
 </div>
 
 <script>
@@ -86,19 +87,12 @@
 
   function changeModel(step) {
     currentIndex += step;
-
     if (currentIndex >= models.length) {
       currentIndex = 0;
     } else if (currentIndex < 0) {
       currentIndex = models.length - 1;
     }
-
     viewer.src = models[currentIndex];
-  }
-
-  // Funcția pentru activarea modului AR trebuie definită
-  function activateAR() {
-    // Cod pentru activarea modului AR aici
   }
 </script>
 
