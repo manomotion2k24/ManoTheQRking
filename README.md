@@ -8,35 +8,36 @@
       body {
         margin: 0;
         padding: 0;
-        font-family: Arial, sans-serif; /* Schimbă fontul pentru un aspect mai modern */
+        font-family: Arial, sans-serif;
       }
       model-viewer {
         width: 100%;
-        height: 400px; /* Reducem înălțimea pentru a nu părea prea zoom-uit */
+        height: 200px; /* Actualizat la 200px */
       }
       .navigation {
         display: flex;
-        justify-content: center; /* Centrăm butoanele */
+        justify-content: space-between; /* Actualizat pentru a departa butoanele */
         margin-top: 10px;
+        padding: 0 20px; /* Adăugat padding pentru a alinia butoanele cu marginile modelului */
       }
       .nav-button {
         cursor: pointer;
-        background-color: #007BFF; /* Schimbăm culoarea butoanelor pentru un aspect mai modern */
+        background-color: #007BFF;
         border: none;
-        border-radius: 20px; /* Rotunjim marginile */
+        border-radius: 20px;
         padding: 10px 20px;
         font-size: 16px;
-        color: white; /* Textul butoanelor în alb */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adăugăm o umbră pentru un aspect 3D */
-        transition: background-color 0.3s, box-shadow 0.3s; /* Adăugăm tranziții pentru efecte vizuale la hover */
+        color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, box-shadow 0.3s;
       }
       .nav-button:hover {
-        background-color: #0056b3; /* Închidem culoarea butonului la hover */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Întărim umbra pentru efect de "lift" */
+        background-color: #0056b3;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       }
       .content {
-        max-width: 800px; /* Limităm lățimea conținutului */
-        margin: auto; /* Centrăm conținutul */
+        max-width: 800px;
+        margin: auto;
         padding: 20px;
       }
     </style>
@@ -67,7 +68,7 @@
 </div>
 
 <script>
-  const models = ["guler2.glb", "Avatar2.glb", "Avatar4.glb"];
+  const models = ["Avatar1.glb", "Avatar2.glb", "Avatar4.glb"];
   let currentIndex = 2;
 
   const viewer = document.getElementById('modelViewer');
