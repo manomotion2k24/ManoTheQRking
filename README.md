@@ -12,12 +12,13 @@
       }
       model-viewer {
         width: 100%;
-        height: 300px; /* Dimensiunea modelului ajustată la 200px */
+        height: 300px; /* Actualizat la 200px */
       }
       .navigation {
         display: flex;
-        justify-content: space-between; /* Butoanele de navigație sunt departate */
-        margin: 10px 20px; /* Spațiu adăugat pentru aliniere */
+        justify-content: space-between; /* Actualizat pentru a departa butoanele */
+        margin-top: 40px; /* Actualizat margin-top pentru a crea spațiu */
+        padding: 0 20px; /* Adăugat padding pentru a alinia butoanele cu marginile modelului */
       }
       .nav-button {
         cursor: pointer;
@@ -39,30 +40,39 @@
         margin: auto;
         padding: 20px;
       }
-      .links {
-        margin-top: 20px; /* Spațiu adăugat între butoane și hyperlinkuri */
+      .features {
+        margin-top: 40px; /* Distanță adăugată între butoane și caracteristici */
       }
     </style>
 </head>
 <body>
 
 <div class="content">
-    <h2><a href="https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts" target="_blank">Comanda Acum: Nike Free Matcon, rosu</a></h2>
-    <h3>Workout Shoes</h3>
-    <model-viewer id="modelViewer" src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
-      <button slot="ar-button" class="ar-button">
-          <span class="levitate">👋</span> Activează modul AR
-      </button>
-    </model-viewer>
-    <div class="navigation">
-        <button class="nav-button" onclick="changeModel(-1)">⇦ prev</button>
-        <button class="nav-button" onclick="changeModel(1)">next ⇨</button>
+    <!-- Mutat în afara div-ului .content pentru a ridica titlul -->
+    <h2 style="text-align: center;"><a href="https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts" target="_blank">Comanda Acum: Nike Free Matcon, rosu</a></h2>
+    <div class="model-and-navigation">
+      <h3>Workout Shoes</h3>
+      <model-viewer id="modelViewer" src="Avatar4.glb" ios-src="Avatar4.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" alt="Nike Free Matcon, rosu">
+        <button slot="ar-button" class="ar-button">
+            <span class="levitate">👋</span> Activează modul AR
+        </button>
+      </model-viewer>
+      <div class="navigation">
+          <button class="nav-button" onclick="changeModel(-1)">⇦ prev</button>
+          <button class="nav-button" onclick="changeModel(1)">next ⇨</button>
+      </div>
     </div>
-    <div class="links">
-        <p><a href="https://manomotion2k24.github.io/Pizza/" class="bold-link" target="_blank">Pizza Quattro Formaggie</a></p>
-        <p><a href="https://manomotion2k24.github.io/My-Beloved-Girl/" class="bold-link" target="_blank">Rama Foto Familie</a></p>
-        <p><a href="https://manomotion2k24.github.io/cactus/" class="bold-link" target="_blank">Cactus Opuntia Albispina</a></p>
+    <div class="features">
+      <p>
+          ✔️Blast From the Past<br>
+          ✔️Flexibility for Speed<br>
+          ✔️Stability for Strength<br>
+          ✔️Colour Shown: Team Red/Cave Purple/Bright Crimson
+      </p>
     </div>
+    <p><a href="https://manomotion2k24.github.io/Pizza/" class="bold-link" target="_blank">Pizza Quattro Formaggie</a></p>
+    <p><a href="https://manomotion2k24.github.io/My-Beloved-Girl/" class="bold-link" target="_blank">Rama Foto Familie</a></p>
+    <p><a href="https://manomotion2k24.github.io/cactus/" class="bold-link" target="_blank">Cactus Opuntia Albispina</a></p>
 </div>
 
 <script>
