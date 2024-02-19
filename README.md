@@ -42,12 +42,13 @@
       }
       .features {
         margin-top: 20px;
+        margin-bottom: 20px; /* Adăugat pentru a crea un spațiu între lista de caracteristici și link-uri */
       }
       .links {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 10px; /* Spațiu între link-uri */
         margin-left: 20px;
       }
     </style>
