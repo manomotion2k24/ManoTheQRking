@@ -46,9 +46,9 @@
       .links {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Modificat pentru aliniere la stânga */
-        gap: 0; /* Eliminat spațiul dintre link-uri */
-        margin-left: 20px; /* Adăugat pentru alinierea la stânga în container */
+        align-items: flex-start;
+        gap: 10px;
+        margin-left: 20px;
       }
     </style>
 </head>
@@ -80,9 +80,9 @@
 
 <script>
   const models = [
-    { file: "guler2.glb", title: "Cumpara acum Guler masaj", url: "https://unizdrav.ro/produse/4021/guler-de-masaj-pentru-gat-si-umeri-unizdrav", subtitle: "Guler de masaj pentru gât și umeri", features: "✔️Pornirea și oprirea căldurii<br>✔️Schimbarea rotației capetelor de masaj<br>✔️3 niveluri de intensitate<br>✔️Oprire automată" },
-    { file: "scaun.glb", title: "Cumpara acum Scaun sufragerie stofă", url: "https://acaju.ro/products/scaun-tapitat-k365-rosu-52x57x90-cm?gad_source=1", subtitle: "Scaun tapițat", features: "✔️Produsul nu este montat<br>✔️Asamblarea este rapida si usoara<br>✔️otel acoperit cu pulbere" },
-    { file: "Avatar4.glb", title: "Cumpara acum Nike sport shoes", url: "https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts", subtitle: "Nike Free Matcon, rosu", features: "✔️Flexibility for Speed<br>✔️Stability for Strength<br>✔️Blast From the Past" }
+    { file: "guler2.glb", iosFile: "guler2.usdz", title: "Cumpara acum Guler masaj", url: "https://unizdrav.ro/produse/4021/guler-de-masaj-pentru-gat-si-umeri-unizdrav", subtitle: "Guler de masaj pentru gât și umeri", features: "✔️Pornirea și oprirea căldurii<br>✔️Schimbarea rotației capetelor de masaj<br>✔️3 niveluri de intensitate<br>✔️Oprire automată" },
+    { file: "scaun.glb", iosFile: "scaun.usdz", title: "Cumpara acum Scaun sufragerie stofă", url: "https://acaju.ro/products/scaun-tapitat-k365-rosu-52x57x90-cm?gad_source=1", subtitle: "Scaun tapițat", features: "✔️Produsul nu este montat<br>✔️Asamblarea este rapida si usoara<br>✔️otel acoperit cu pulbere" },
+    { file: "Avatar4.glb", iosFile: "Avatar4.usdz", title: "Cumpara acum Nike sport shoes", url: "https://www.nike.com/ro/t/free-metcon-4-workout-shoes-2g2hts", subtitle: "Nike Free Matcon, rosu", features: "✔️Flexibility for Speed<br>✔️Stability for Strength<br>✔️Blast From the Past" }
   ];
   let currentIndex = 2; // Pornim de la modelul Nike sport shoes
 
@@ -106,6 +106,7 @@
     const featuresElement = document.getElementById('features');
 
     viewer.src = model.file;
+    viewer.setAttribute('ios-src', model.iosFile); // Actualizează sursa pentru AR
     viewer.alt = model.subtitle;
     titleElement.href = model.url;
     titleElement.textContent = model.title;
