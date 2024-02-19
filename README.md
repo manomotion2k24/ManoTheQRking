@@ -4,54 +4,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produse de calitate superioară</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-      model-viewer {
-        width: 100%;
-        height: 400px;
-      }
-      .navigation {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-        padding: 0 20px;
-      }
-      .nav-button {
-        cursor: pointer;
-        background-color: #007BFF;
-        border: none;
-        border-radius: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s, box-shadow 0.3s;
-      }
-      .nav-button:hover {
-        background-color: #0056b3;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      }
-      .content {
-        max-width: 800px;
-        margin: auto;
-        padding: 20px;
-      }
-      .features {
-        margin-top: 20px;
-        margin-bottom: 20px; /* Adăugat pentru a crea un spațiu între lista de caracteristici și link-uri */
-      }
-      .links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px; /* Spațiu între link-uri */
-        margin-left: 20px;
-      }
-    </style>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  model-viewer {
+    width: 100%;
+    height: 400px;
+  }
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  .nav-button {
+    cursor: pointer;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  .nav-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  .features {
+    margin-top: 20px;
+    margin-bottom: 40px; /* Spațiu adăugat între caracteristici și linkuri */
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 20px;
+    margin-top: 0; /* Elimină spațiul suplimentar de sus */
+    margin-bottom: 0; /* Elimină spațiul dintre elementele din .links */
+  }
+</style>
+
 </head>
 <body>
 
